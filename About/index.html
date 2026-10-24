@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Modified Sep 25, 2026, 7:30 PM --> <!--James Kim Graphic Designer and Programmer 2027-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="Homepage Images/Kimbro Logo.svg">
+  <title>Dead or Alive?</title>
+  <!--<link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">-->
+  <link rel="stylesheet" href="CSS/style.css">
+  <script src="JS/main.js" defer></script>
+  <style>
+  body{
+    background-color: rgb(215, 255, 207);
+    font-family:'Rubik', sans-serif;
+  }
+
+  .backButton {
+    font-size: 1.5em;
+    color:black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0vw;
+    padding: 0.5vh 4vw;
+    background: radial-gradient(yellow, orange);
+    width:fit-content;
+    height:fit-content;
+    border-radius: 2.5vw;
+    transition: padding 0.5s ease, font-size 0.3s ease, font-weight 0.3s ease;
+  }
+
+  .backButton:hover{
+    padding:2vw 4vw;
+    font-size: 1em;
+    font-weight:bolder;
+    border-radius: 3vw;
+  }
+
+  h1{
+    padding:1vw;
+  }
+
+  .textArea{
+    position:absolute;
+    top:45vh;
+    left:10vw;
+    width:25vw;
+    line-height: 1.5em;
+
+    z-index: -1;
+  }
+
+  .textArea p{
+    font-size:1.25em;
+  }
+
+
+  .paperPage{
+    position:absolute;
+    top:0px;left:50px;
+    border:solid 1px rgb(220, 220, 195);
+    background-color:ivory;
+    padding:2em;
+    width:fit-content;
+    height:fit-content;
+    display:block;
+  }
+
+  .auto-grid {
+  width:60vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 1rem;
+}
+
+  figure{
+    max-height: 100%;
+    width:23%;
+    height:fit-content;
+    margin:0px;
+    overflow: hidden;
+  }
+
+  figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+    display: block;
+  }
+
+  .paperPageWrapper{
+    position: sticky;
+    top: 0;
+    height:100vh;
+    overflow: hidden; /* hides pages once they've flown off to the right */
+  }
+
+  .scrollTrack {
+  height: 100vh;
+}
+
+/* Stacking: page 1 on top, so it flips away first */
+#page1 { z-index: 3; }
+#page2 { z-index: 2; }
+#page3 { z-index: 1; }
+
+@keyframes flipRight {
+  from {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(110vw) rotate(25deg);
+    opacity: 1;
+  }
+}
+
+/* Only pages 1 and 2 flip; page 3 is the last card left standing */
+#page1, #page2, #page3 {
+  animation: flipRight linear both;
+  animation-timeline: scroll(root);
+}
+
+/* Each page gets its own slice of the total scroll (0%–100% of the page) */
+#page1 { animation-range: 10% 40%; }
+#page2 { animation-range: 45% 75%; }
+#page3 { animation-range: 75% 100%; }
+
+hr{
+    border: none;
+    height: 1px; /* Adjust thickness as needed */
+    background-color: #000000; /* Pure black */
+    width: 100%; /* Spans the full width */
+    margin: 0px; /* Space above and below the bar */
+  }
+
+  @media screen and (max-width: 900px){
+    .textArea{
+    position:absolute;
+    top:50vw;
+    left:20vw;
+    width:50vw;
+    line-height: 1em;
+  }
+
+  .textArea p{
+    font-size:1em;
+  }
+  
+  .scrollTrack {
+  height: 40vh;
+  }
+  }
+  </style>
+</head>
+
+<body>
+<header>
+    <nav>
+    </nav>
+</header>
+
+<main>
+<div style="display:flex; justify-content: space-between; height:fit-content">
+<h1>ABOUT US</h1><a href="../" class="backButton">back</a>
+</div>
+<hr>
+<h1>&#x2B07 Scroll Down &#x2B07</h1>
+
+<div class="scrollTrack">
+<div class="paperPageWrapper">
+
+<section class="paperPage" id="page1">
+<div class="auto-grid">
+  <figure class="portfolio-item-video">
+    <img src="../WebsiteImages/alive/motionItems/bird.webp" alt="plants">        
+  </figure>
+
+  <figure class="portfolio-item-video">
+    <img src="../WebsiteImages/alive/motionItems/clownFish.webp" alt="plants">        
+  </figure>
+
+  <figure class="portfolio-item-video">
+    <img src="../WebsiteImages/alive/motionItems/colorfulFish.webp" alt="plants">         
+  </figure>
+
+  <figure class="portfolio-item-video">
+    <img src="../WebsiteImages/alive/motionItems/fightingGif.webp" alt="plants">    
+  </figure>
+
+  <figure class="portfolio-item-video">
+    <img src="../WebsiteImages/alive/motionItems/goldFish.webp" alt="plants">    
+  </figure>
+
+  <figure class="portfolio-item-video">
+    <img src="../WebsiteImages/alive/motionItems/gpigs.webp" alt="plants">    
+  </figure>
+  
+  <figure class="portfolio-item-video">
+    <img src="../WebsiteImages/alive/motionItems/greenBird.webp" alt="plants">    
+  </figure>
+
+  <figure class="portfolio-item-video">
+    <img src="../WebsiteImages/alive/motionItems/man.webp" alt="plants">    
+  </figure>
+
+  <figure class="portfolio-item-video">
+    <img src="../WebsiteImages/alive/motionItems/mealWorms.webp" alt="plants">    
+  </figure>
+
+  <figure class="portfolio-item-video">
+    <img src="../WebsiteImages/alive/motionItems/MMAGuys.webp" alt="plants">    
+  </figure>
+
+  <figure class="portfolio-item-video">
+    <img src="../WebsiteImages/alive/motionItems/mouse.webp" alt="plants">    
+  </figure>
+
+  <figure class="portfolio-item-video">
+    <img src="../WebsiteImages/alive/motionItems/natureLabFish.webp" alt="plants">    
+  </figure>
+</div> <!--autogrid-->
+</section> <!--paperPage-->
+
+<section class="paperPage" id="page2">
+  <div class="auto-grid">
+    <figure class="portfolio-item-video">
+      <img src="../WebsiteImages/alive/motionItems/orangeBird.webp" alt="plants">        
+    </figure>
+  
+    <figure class="portfolio-item-video">
+      <img src="../WebsiteImages/alive/motionItems/Outdoors.webp" alt="plants">        
+    </figure>
+  
+    <figure class="portfolio-item-video">
+      <img src="../WebsiteImages/alive/motionItems/plants.webp" alt="plants">         
+    </figure>
+  
+    <figure class="portfolio-item-video">
+      <img src="../WebsiteImages/alive/motionItems/reptiles.webp" alt="plants">    
+    </figure>
+  
+    <figure class="portfolio-item-video">
+      <img src="../WebsiteImages/alive/motionItems/skinnyFish.webp" alt="plants">    
+    </figure>
+  
+    <figure class="portfolio-item-video">
+      <img src="../WebsiteImages/alive/motionItems/turtles.webp" alt="plants">    
+    </figure>
+    
+    <figure class="portfolio-item-video">
+      <img src="../WebsiteImages/alive/motionItems/bird.webp" alt="plants">    
+    </figure>
+  
+    <figure class="portfolio-item-video">
+      <img src="../WebsiteImages/alive/motionItems/clownFish.webp" alt="plants">    
+    </figure>
+  
+    <figure class="portfolio-item-video">
+      <img src="../WebsiteImages/alive/motionItems/colorfulFish.webp" alt="plants">    
+    </figure>
+  
+    <figure class="portfolio-item-video">
+      <img src="../WebsiteImages/alive/motionItems/fightingGif.webp" alt="plants">    
+    </figure>
+  
+    <figure class="portfolio-item-video">
+      <img src="../WebsiteImages/alive/motionItems/goldFish.webp" alt="plants">    
+    </figure>
+  
+    <figure class="portfolio-item-video">
+      <img src="../WebsiteImages/alive/motionItems/gpigs.webp" alt="plants">    
+    </figure>
+  </div> <!--autogrid-->
+  </section> <!--paperPage-->
+
+  <section class="paperPage" id="page3">
+    <div class="auto-grid">
+      <figure class="portfolio-item-video">
+        <img src="../WebsiteImages/alive/motionItems/greenBird.webp" alt="plants">        
+      </figure>
+    
+      <figure class="portfolio-item-video">
+        <img src="../WebsiteImages/alive/motionItems/man.webp" alt="plants">        
+      </figure>
+    
+      <figure class="portfolio-item-video">
+        <img src="../WebsiteImages/alive/motionItems/mealWorms.webp" alt="plants">         
+      </figure>
+    
+      <figure class="portfolio-item-video">
+        <img src="../WebsiteImages/alive/motionItems/MMAGuys.webp" alt="plants">    
+      </figure>
+    
+      <figure class="portfolio-item-video">
+        <img src="../WebsiteImages/alive/motionItems/mouse.webp" alt="plants">    
+      </figure>
+    
+      <figure class="portfolio-item-video">
+        <img src="../WebsiteImages/alive/motionItems/goldFish.webp" alt="plants">    
+      </figure>
+      
+      <figure class="portfolio-item-video">
+        <img src="../WebsiteImages/alive/motionItems/natureLabFish.webp" alt="plants">    
+      </figure>
+    
+      <figure class="portfolio-item-video">
+        <img src="../WebsiteImages/alive/motionItems/orangeBird.webp" alt="plants">    
+      </figure>
+    
+      <figure class="portfolio-item-video">
+        <img src="../WebsiteImages/alive/motionItems/reptiles.webp" alt="plants">    
+      </figure>
+    
+      <figure class="portfolio-item-video">
+        <img src="../WebsiteImages/alive/motionItems/plants.webp" alt="plants">    
+      </figure>
+    
+      <figure class="portfolio-item-video">
+        <img src="../WebsiteImages/alive/motionItems/skinnyFish.webp" alt="plants">    
+      </figure>
+    
+      <figure class="portfolio-item-video">
+        <img src="../WebsiteImages/alive/motionItems/turtles.webp" alt="plants">    
+      </figure>
+    </div> <!--autogrid-->
+    </section> <!--paperPage-->
+
+</div><!--papberPageWrapper-->
+</div><!--ScrollTracker-->
+
+<section class="textArea">
+<h2>Dead or Alive</h2>
+<p>Is a pivate collection I have compiled of my photography experience 
+  around Rhode Island in 2026. It organizes my interests, mainly animals 
+  and printed art, into categories ranging from Alive to Non Living. I was 
+  inspired to make this work from my fascination with the concept of 
+  biological animation, and what constitutes a living breathing body, soul, 
+  and mind. Is it merely a scientific question, or are there artistic
+  components too?</p>
+</section>
+
+</main>
+
+<footer>
+    
+</footer>
+</body>
+</html>

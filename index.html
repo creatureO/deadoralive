@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Modified Sep 25, 2026, 7:30 PM --> <!--James Kim Graphic Designer and Programmer 2027-->  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+<!-- Fallback PNG (browsers without SVG favicon support, e.g. Safari) -->
+<link rel="icon" type="image/png" href="./WebsiteImages/mainPageImages/deadoraliveLogo.png" sizes="48x48">
+<!-- Preferred: scalable SVG -->
+<link rel="icon" type="image/svg+xml" href="./WebsiteImages/mainPageImages/deadorAliveLogo.svg" sizes="any">
+<!-- 2. For iOS Home Screen and Safari Favorites Grid (The solid PNG version) -->
+<link rel="apple-touch-icon" href="./WebsiteImages/mainPageImages/deadoraliveLogo.pngg">
+
+  <title>Dead or Alive?</title>
+  <!--<link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">-->
+  <link rel="stylesheet" href="CSS/style.css">
+  <script src="JS/main.js" defer></script>
+</head>
+
+<body>
+    <!-- CLICKABLE INTERACTION ITEM, Lightboxes -->
+  <dialog id="lightbox" class="hidden">
+    <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <span id="lightbox-prev" onclick="changeSlide(-1)">&#10094;</span>
+    <div id="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <model-viewer id="model-viewer" class="hidden" src="" alt="" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+      <video id="lightbox-video" class="hidden" controls></video>
+      <iframe id="lightbox-youtube" class="hidden" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div id="lightbox-caption"></div>
+      <!-- <div class="gapMaker"></div> -->
+    </div>
+    <span id="lightbox-next" onclick="changeSlide(1)">&#10095;</span>
+  </dialog>
+<!-- CLICKABLE INTERACTION ITEM, lightboxes -->
+
+<header>
+<div style="display:flex; line-height: 0.15em; padding:0.5vw 3vw; border-radius: 5vw; background:radial-gradient(yellow, orange); height:fit-content;">
+    <span>
+    <h1>DEAD</h1>
+    <h2>or</h2>
+    <h1>ALIVE</h1>
+    </span>
+</div>
+    <nav>
+        <div id="clickToOpen">_____<br>&nbsp;&nbsp;_____<br>&nbsp;&nbsp;&nbsp;&nbsp;_____</div>
+        <ul>
+          <li><a href="#alive">Alive</a></li>
+          <li><a href="#aliveAtOnePoint">Alive at One Point</a></li>
+          <li><a href="#aliveInASense">Alive in a Sense</a></li>
+          <li><a href="#neverAlive">Never Alive</a></li>
+          <li><a href="./About/">About</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+
+<!-- CATEGORIZATION NOTE: .domain div means part of whole realm (ie: dead, alive, etc). 
+ section means subcategory (collection of images), 
+ figure is actual items (can do grided items or jus one whole item).-->
+
+<div class="work-row-wrapper"> <!--<BUTTON>-->
+  <h1 class="sectionTitle"></h1>
+    <button class="scroll-btn scroll-left" onclick="scrollRow(this,-1)">&#10094;</button><!--<BUTTON>--> 
+  <div class="workRow"> <!--________v Portfolio Horzontal scroll v________-->
+
+  <div class="territory" id="alive" data-color="#d7ffcf" data-caption="ALIVE"> <!-- 1 -->
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="collectionTitle">Subcategory of stuff</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+      <div class="featured-item-section-video">
+          <figure class="portfolio-item-video">
+          <img src="./WebsiteImages/alive/motionItems/clownFish.webp" 
+          alt="clownfish"
+          data-images='[{"type":"image","src":"./WebsiteImages/alive/motionItems/clownFish.webp"},
+          {"type":"youtube","src":"aqkhn1hJqeo"},
+          {"type":"image","src":"./WebsiteImages/alive/motionItems/clownFish.webp"}]'
+          data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITYGIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITYGIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITYGIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITYGIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITYGIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITYGIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY GIGGITY"
+          onclick="openLightbox(this)">
+          <figcaption>
+            <span class="item-title">BabaBuui</span>
+          </figcaption>           
+          </figure>
+      </div>
+          <p class="description">This is a thing like</p>
+      </div>
+      </section>
+  
+  
+  <!-- black bar dividing 1-->
+  
+  <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="collectionTitle">Subcategory of stuff 2</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+        <figure class="portfolio-item-video">
+        <img src="./WebsiteImages/alive/motionItems/fightingGif.webp" 
+        alt="fighting"
+        data-images='[{"type":"image","src":"./WebsiteImages/alive/motionItems/fightingGif.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/motionItems/colorfulFish.webp"},
+        {"type":"youtube","src":"aqkhn1hJqeo"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        onclick="openLightbox(this)">
+        <figcaption>
+          <span class="item-title">BabaBuui</span>
+        </figcaption>           
+        </figure>
+        <p class="description">This is a thing like</p>
+      </div>
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="collectionTitle">Subcategory of stuff 2</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+          <figure class="portfolio-item-video">
+          <img src="./WebsiteImages/alive/motionItems/MMAGuys.webp" 
+          alt="MMA"
+          data-images='[{"type":"image","src":"./WebsiteImages/alive/motionItems/MMAGuys.webp"}]'
+          data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+          onclick="openLightbox(this)">
+          <figcaption>
+            <span class="item-title">BabaBuui</span>
+          </figcaption>           
+          </figure>
+          <p class="description">This is a thing like</p>
+        </div>
+      </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="collectionTitle">Subcategory of stuff 2</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+          <figure class="portfolio-item-video">
+          <img src="./WebsiteImages/alive/photos/man1.webp" 
+          alt="person"
+          data-images='[{"type":"image","src":"./WebsiteImages/alive/photos/man1.webp"},
+          {"type":"image","src":"./WebsiteImages/alive/photos/man2.webp"},
+          {"type":"image","src":"./WebsiteImages/alive/photos/man3.webp"}]'
+          data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+          onclick="openLightbox(this)">
+          <figcaption>
+            <span class="item-title">BabaBuui</span>
+          </figcaption>           
+          </figure>
+          <p class="description">This is a thing like</p>
+      </div>
+    </section>  
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="collectionTitle">Subcategory of stuff 2</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+          <figure class="portfolio-item-video">
+          <img src="./WebsiteImages/alive/motionItems/man.webp" 
+          alt="person"
+          data-images='[{"type":"image","src":"./WebsiteImages/alive/photos/man4.webp"},
+          {"type":"image","src":"./WebsiteImages/alive/photos/man5.webp"},
+          {"type":"image","src":"./WebsiteImages/alive/photos/man6.webp"},
+          {"type":"image","src":"./WebsiteImages/alive/photos/man7.webp"},
+          {"type":"image","src":"./WebsiteImages/alive/photos/man8.webp"},
+          {"type":"image","src":"./WebsiteImages/alive/photos/man9.webp"},
+          {"type":"image","src":"./WebsiteImages/alive/photos/man10.webp"}]'
+          data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+          onclick="openLightbox(this)">
+          <figcaption>
+            <span class="item-title">BabaBuui</span>
+          </figcaption>           
+          </figure>
+          <p class="description">This is a thing like</p>
+      </div>
+    </section>  
+  
+  <!-- black bar dividing 2-->
+  
+  <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="collectionTitle">Subcategory of stuff 3</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+        <figure class="portfolio-item-video">
+        <img src="./WebsiteImages/alive/motionItems/natureLabFish.webp" 
+        alt="naturelabfish"
+        data-images='[{"type":"image","src":"./WebsiteImages/alive/motionItems/natureLabFish.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/fish1.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/fish2.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/fish3.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/fish4.webp"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        onclick="openLightbox(this)">
+        <figcaption>
+          <span class="item-title">BabaBuui</span>
+        </figcaption>           
+        </figure>
+        <p class="description">This is a thing like</p>
+    </div>
+    </section>
+  
+  
+  
+  <!-- black bar dividing 3-->
+  
+  <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="collectionTitle">Subcategory of stuff 3</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+        <figure class="portfolio-item-video">
+        <img src="./WebsiteImages/alive/motionItems/goldFish.webp" 
+        alt="goldfish"
+        data-images='[{"type":"image","src":"./WebsiteImages/alive/motionItems/goldFish.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/fish5.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/fish6.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/fish7.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/fish8.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/fish9.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/fish10.webp"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        onclick="openLightbox(this)">
+        <figcaption>
+          <span class="item-title">BabaBuui</span>
+        </figcaption>           
+        </figure>
+        <p class="description">This is a thing like</p>
+    </div>
+    </section>
+  
+  
+  
+  <!-- black bar dividing 4-->
+    
+  <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="collectionTitle">Subcategory of stuff 4</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+        <figure class="portfolio-item-video">
+        <img src="./WebsiteImages/alive/motionItems/greenBird.webp" 
+        alt="greenbird"
+        data-images='[{"type":"image","src":"./WebsiteImages/alive/motionItems/greenBird.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/motionItems/bird.webp"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        onclick="openLightbox(this)">
+        <figcaption>
+          <span class="item-title">Subcategory of stuff 5</span>
+        </figcaption>           
+        </figure>
+        <p class="description">This is a thing like</p>
+    </div>
+    </section>
+
+      <!-- black bar dividing 5-->
+    
+  <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+        <figure class="portfolio-item-video">
+        <img src="./WebsiteImages/alive/motionItems/orangeBird.webp" 
+        alt="orangebird"
+        data-images='[{"type":"image","src":"./WebsiteImages/alive/motionItems/orangeBird.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/bird1.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/bird2.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/bird3.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/bird4.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/bird5.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/bird6.webp"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        onclick="openLightbox(this)">
+        <figcaption>
+          <span class="item-title">Subcategory of stuff 5</span>
+        </figcaption>           
+        </figure>
+        <p class="description">This is a thing like</p>
+    </div>
+    </section>
+
+        <!-- black bar dividing 6-->
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="collectionTitle">Subcategory of stuff 5</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+          <figure class="portfolio-item-video">
+          <img src="./WebsiteImages/alive/motionItems/mealWorms.webp" 
+          alt="mealworms"
+          data-images='[{"type":"image","src":"./WebsiteImages/alive/motionItems/mealWorms.webp"},
+          {"type":"image","src":"./WebsiteImages/alive/motionItems/orangeBird.webp"}]'
+          data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+          onclick="openLightbox(this)">
+          <figcaption>
+            <span class="item-title">Subcategory of stuff 5</span>
+          </figcaption>           
+          </figure>
+          <p class="description">This is a thing like</p>
+      </div>
+      </section>
+
+          <!-- black bar dividing 7-->
+
+  <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+        <figure class="portfolio-item-video">
+        <img src="./WebsiteImages/alive/motionItems/skinnyFish.webp" 
+        alt="skinfish"
+        data-images='[{"type":"image","src":"./WebsiteImages/alive/motionItems/skinnyFish.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/crawfish1.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/crawfish2.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/crawfish3.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/fish11.webp"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        onclick="openLightbox(this)">
+        <figcaption>
+          <span class="item-title">Subcategory of stuff 5</span>
+        </figcaption>           
+        </figure>
+        <p class="description">This is a thing like</p>
+    </div>
+    </section>
+
+          <!-- black bar dividing 8-->
+
+  <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+        <figure class="portfolio-item-video">
+        <img src="./WebsiteImages/alive/motionItems/turtles.webp" 
+        alt="turtles"
+        data-images='[{"type":"image","src":"./WebsiteImages/alive/motionItems/turtles.webp"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        onclick="openLightbox(this)">
+        <figcaption>
+          <span class="item-title">Subcategory of stuff 5</span>
+        </figcaption>           
+        </figure>
+        <p class="description">This is a thing like</p>
+    </div>
+    </section>
+
+            <!-- black bar dividing 9-->
+
+  <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+        <figure class="portfolio-item-video">
+        <img src="./WebsiteImages/alive/motionItems/gpigs.webp" 
+        alt="gpigs"
+        data-images='[{"type":"image","src":"./WebsiteImages/alive/photos/gpigs1.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/gpigs2.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/gpigs3.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/gpigs4.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/gpigs5.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/gpigs6.webp"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        onclick="openLightbox(this)">
+        <figcaption>
+          <span class="item-title">Subcategory of stuff 5</span>
+        </figcaption>           
+        </figure>
+        <p class="description">This is a thing like</p>
+    </div>
+  </section>
+
+  <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+        <figure class="portfolio-item-video">
+        <img src="./WebsiteImages/alive/motionItems/mouse.webp" 
+        alt="mouse"
+        data-images='[{"type":"image","src":"./WebsiteImages/alive/photos/mouse1.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/mouse2.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/mouse3.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/mouse4.webp"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        onclick="openLightbox(this)">
+        <figcaption>
+          <span class="item-title">Subcategory of stuff 5</span>
+        </figcaption>           
+        </figure>
+        <p class="description">This is a thing like</p>
+    </div>
+  </section>
+
+  <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+        <figure class="portfolio-item-video">
+        <img src="./WebsiteImages/alive/motionItems/reptiles.webp" 
+        alt="reptiles"
+        data-images='[{"type":"image","src":"./WebsiteImages/alive/photos/reptiles1.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/reptiles2.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/reptiles3.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/reptiles4.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/reptiles5.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/reptiles6.webp"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        onclick="openLightbox(this)">
+        <figcaption>
+          <span class="item-title">Subcategory of stuff 5</span>
+        </figcaption>           
+        </figure>
+        <p class="description">This is a thing like</p>
+    </div>
+  </section>
+
+  <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+        <figure class="portfolio-item-video">
+        <img src="./WebsiteImages/alive/motionItems/plants.webp" 
+        alt="plants"
+        data-images='[{"type":"image","src":"./WebsiteImages/alive/photos/plants1.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/plants2.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/plants3.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/plants4.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/plants5.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/plants6.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/plants7.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/plants8.webp"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        onclick="openLightbox(this)">
+        <figcaption>
+          <span class="item-title">Subcategory of stuff 5</span>
+        </figcaption>           
+        </figure>
+        <p class="description">This is a thing like</p>
+    </div>
+  </section>
+
+  <section id="firstBackgroundColor"> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+    <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+    <div class="projectDivider">
+        <figure class="portfolio-item-video">
+        <img src="./WebsiteImages/alive/motionItems/Outdoors.webp" 
+        alt="outdoors"
+        data-images='[{"type":"image","src":"./WebsiteImages/alive/photos/Outdoors1.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/Outdoors2.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/Outdoors3.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/Outdoors5.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/Outdoors6.webp"},
+        {"type":"image","src":"./WebsiteImages/alive/photos/Outdoors7.webp"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        onclick="openLightbox(this)">
+        <figcaption>
+          <span class="item-title">Subcategory of stuff 5</span>
+        </figcaption>           
+        </figure>
+        <p class="description">This is a thing like</p>
+    </div>
+  </section>
+</div> <!-- 1 -->
+
+  <div class="territory" id="aliveAtOnePoint" data-color="#74b9ff" data-caption="ALIVE AT ONE POINT"> <!-- 2 -->
+    <section>
+    <div class="projectDivider">
+    <h2 class="collectionTitle">Subcategory of stuff 7</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="viewer-container">
+        <model-viewer src="WebsiteImages/aliveAtOnePoint/GLB3Ditems/Iguana-compressed.glb"
+        alt="iguana"
+        data-images='[{"type":"model-viewer","src":"WebsiteImages/aliveAtOnePoint/GLB3Ditems/Iguana-compressed.glb"},
+        {"type":"model-viewer","src":"WebsiteImages/aliveAtOnePoint/GLB3Ditems/Crocodile-compressed.glb"},
+        {"type":"model-viewer","src":"WebsiteImages/aliveAtOnePoint/GLB3Ditems/Red Eyed Skink-compressed.glb"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        camera-controls auto-rotate shadow-intensity="1"
+        onclick="openLightbox(this)"></model-viewer>
+      </div> <!--  id="my-3d-model" -->
+    <p class="description">This is a thing like</p>
+    </div>
+    </section>
+
+            <!-- black bar dividing 10-->
+            <section>
+              <div class="projectDivider" style="width:5vw;"></div>
+            </section>
+
+    <section>
+    <div class="projectDivider">
+    <h2 class="collectionTitle">Subcategory of stuff 7</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="viewer-container">
+        <model-viewer src="WebsiteImages/aliveAtOnePoint/GLB3Ditems/Crocodile-compressed.glb"
+        alt="crocodile"
+        data-images='[{"type":"model-viewer","src":"WebsiteImages/aliveAtOnePoint/GLB3Ditems/Crocodile-compressed.glb"},
+        {"type":"model-viewer","src":"WebsiteImages/aliveAtOnePoint/GLB3Ditems/Red Eyed Skink-compressed.glb"},
+        {"type":"model-viewer","src":"WebsiteImages/aliveAtOnePoint/GLB3Ditems/Iguana-compressed.glb"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        camera-controls auto-rotate shadow-intensity="1"
+        onclick="openLightbox(this)"></model-viewer>
+      </div> <!--  id="my-3d-model" -->
+    <p class="description">This is a thing like</p>
+    </div>
+    </section>
+    
+            <!-- black bar dividing 11-->
+            <section>
+              <div class="projectDivider" style="width:5vw;"></div>
+            </section>
+            
+    <section>
+    <div class="projectDivider">
+    <h2 class="collectionTitle">Subcategory of stuff 7</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="viewer-container">
+        <model-viewer src="WebsiteImages/aliveAtOnePoint/GLB3Ditems/Red Eyed Skink-compressed.glb"
+        alt="lizard"
+        data-images='[{"type":"model-viewer","src":"WebsiteImages/aliveAtOnePoint/GLB3Ditems/Red Eyed Skink-compressed.glb"},
+        {"type":"model-viewer","src":"WebsiteImages/aliveAtOnePoint/GLB3Ditems/Crocodile-compressed.glb"},
+        {"type":"model-viewer","src":"WebsiteImages/aliveAtOnePoint/GLB3Ditems/Iguana-compressed.glb"}]'
+        data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+        camera-controls auto-rotate shadow-intensity="1"
+        onclick="openLightbox(this)"></model-viewer>
+      </div> <!--  id="my-3d-model" -->
+    <p class="description">This is a thing like</p>
+    </div>
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+          <figure class="portfolio-item-video">
+          <img src="./WebsiteImages/aliveAtOnePoint/photos/deadAnimal.webp"
+          alt="deadanimal"
+          data-images='[{"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/deadAnimal1.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/deadAnimal2.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/deadAnimal3.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/deadAnimal4.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/deadAnimal5.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/deadAnimal6.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/deadAnimal7.webp"}]'
+          data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+          onclick="openLightbox(this)">
+          <figcaption>
+            <span class="item-title">Subcategory of stuff 5</span>
+          </figcaption>           
+          </figure>
+          <p class="description">This is a thing like</p>
+      </div>
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+          <figure class="portfolio-item-video">
+          <img src="./WebsiteImages/aliveAtOnePoint/photos/food.webp"
+          alt="food"
+          data-images='[{"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/food1.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/food2.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/food3.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/food4.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/food5.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/food6.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/food7.webp"}]'
+          data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+          onclick="openLightbox(this)">
+          <figcaption>
+            <span class="item-title">Subcategory of stuff 5</span>
+          </figcaption>           
+          </figure>
+          <p class="description">This is a thing like</p>
+      </div>
+    </section>
+
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+          <figure class="portfolio-item-video">
+          <img src="./WebsiteImages/aliveAtOnePoint/photos/microscope.webp"
+          alt="microscope"
+          data-images='[{"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/microscope1.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/microscope2.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/microscope3.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/microscope4.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/microscope5.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/microscope6.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/microscope7.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveAtOnePoint/photos/microscope8.webp"}]'
+          data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+          onclick="openLightbox(this)">
+          <figcaption>
+            <span class="item-title">Subcategory of stuff 5</span>
+          </figcaption>           
+          </figure>
+          <p class="description">This is a thing like</p>
+      </div>
+    </section>
+  </div> <!-- 2 -->
+    
+  <div class="territory" id="aliveInASense" data-color="#55efc4" data-caption="ALIVE IN A SENCE"> <!-- 3 -->
+    <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+      <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+      <div class="projectDivider">
+          <figure class="portfolio-item-video">
+          <img src="./WebsiteImages/aliveInASense/photos/oldAmericana.webp"
+          alt="oldamericana"
+          data-images='[{"type":"image","src":"./WebsiteImages/aliveInASense/photos/oldAmericana1.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveInASense/photos/oldAmericana2.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveInASense/photos/oldAmericana3.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveInASense/photos/oldAmericana4.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveInASense/photos/oldAmericana5.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveInASense/photos/oldAmericana6.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveInASense/photos/oldAmericana7.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveInASense/photos/oldAmericana8.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveInASense/photos/oldAmericana9.webp"},
+          {"type":"image","src":"./WebsiteImages/aliveInASense/photos/oldAmericana10.webp"}]'
+          data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+          onclick="openLightbox(this)">
+          <figcaption>
+            <span class="item-title">Subcategory of stuff 5</span>
+          </figcaption>           
+          </figure>
+          <p class="description">This is a thing like</p>
+      </div>
+    </section>
+
+      <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+        <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+        <div class="projectDivider">
+            <figure class="portfolio-item-video">
+            <img src="./WebsiteImages/aliveInASense/photos/bwComics.webp" 
+            alt="bwcomics"
+            data-images='[{"type":"image","src":"./WebsiteImages/aliveInASense/photos/bwComics1.webp"},
+            {"type":"image","src":"./WebsiteImages/aliveInASense/photos/bwComics2.webp"},
+            {"type":"image","src":"./WebsiteImages/aliveInASense/photos/bwComics3.webp"},
+            {"type":"image","src":"./WebsiteImages/aliveInASense/photos/bwComics4.webp"},
+            {"type":"image","src":"./WebsiteImages/aliveInASense/photos/bwComics5.webp"},
+            {"type":"image","src":"./WebsiteImages/aliveInASense/photos/bwComics6.webp"},
+            {"type":"image","src":"./WebsiteImages/aliveInASense/photos/bwComics7.webp"}]'
+            data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+            onclick="openLightbox(this)">
+            <figcaption>
+              <span class="item-title">Subcategory of stuff 5</span>
+            </figcaption>           
+            </figure>
+            <p class="description">This is a thing like</p>
+        </div>
+      </section>
+
+        <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+          <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+          <div class="projectDivider">
+              <figure class="portfolio-item-video">
+              <img src="./WebsiteImages/aliveInASense/photos/colorComics.webp" 
+              alt="colorcomics"
+              data-images='[{"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics1.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics2.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics3.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics4.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics5.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics6.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics7.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics8.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics9.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics10.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics11.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics12.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics13.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics14.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics16.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics17.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics18.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics19.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics20.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics21.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics22.webp"},
+              {"type":"image","src":"./WebsiteImages/aliveInASense/photos/colorComics23.webp"}]'
+              data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+              onclick="openLightbox(this)">
+              <figcaption>
+                <span class="item-title">Subcategory of stuff 5</span>
+              </figcaption>           
+              </figure>
+              <p class="description">This is a thing like</p>
+          </div>
+        </section>
+
+        <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+              <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+              <div class="projectDivider">
+                  <figure class="portfolio-item-video">
+                  <img src="./WebsiteImages/aliveInASense/photos/comicAd.webp" 
+                  alt="comicads"
+                  data-images='[{"type":"image","src":"./WebsiteImages/aliveInASense/photos/comicAd1.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/comicAd2.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/comicAd3.webp"}]'
+                  data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+                  onclick="openLightbox(this)">
+                  <figcaption>
+                    <span class="item-title">Subcategory of stuff 5</span>
+                  </figcaption>           
+                  </figure>
+                  <p class="description">This is a thing like</p>
+              </div>
+        </section>
+
+        <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+              <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+              <div class="projectDivider">
+                  <figure class="portfolio-item-video">
+                  <img src="./WebsiteImages/aliveInASense/photos/dareDevil.webp" 
+                  alt="daredevil"
+                  data-images='[{"type":"image","src":"./WebsiteImages/aliveInASense/photos/dareDevil1.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/dareDevil2.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/dareDevil3.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/dareDevil4.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/dareDevil5.webp"}]'
+                  data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+                  onclick="openLightbox(this)">
+                  <figcaption>
+                    <span class="item-title">Subcategory of stuff 5</span>
+                  </figcaption>           
+                  </figure>
+                  <p class="description">This is a thing like</p>
+              </div>
+        </section>
+
+        <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+              <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+              <div class="projectDivider">
+                  <figure class="portfolio-item-video">
+                  <img src="./WebsiteImages/aliveInASense/photos/bookArt.webp" 
+                  alt="bookart"
+                  data-images='[{"type":"image","src":"./WebsiteImages/aliveInASense/photos/bookArt1.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/bookArt2.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/bookArt3.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/bookArt4.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/bookArt5.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/bookArt6.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/bookArt7.webp"}]'
+                  data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+                  onclick="openLightbox(this)">
+                  <figcaption>
+                    <span class="item-title">Subcategory of stuff 5</span>
+                  </figcaption>           
+                  </figure>
+                  <p class="description">This is a thing like</p>
+              </div>
+          </section>
+
+          <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+              <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+              <div class="projectDivider">
+                  <figure class="portfolio-item-video">
+                  <img src="./WebsiteImages/aliveInASense/photos/wallArt.webp" 
+                  alt="wallart"
+                  data-images='[{"type":"image","src":"./WebsiteImages/aliveInASense/photos/wallArt1.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/wallArt2.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/wallArt3.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/wallArt4.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/wallArt5.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/wallArt6.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/wallArt7.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/wallArt8.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/wallArt9.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/wallArt10.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/wallArt11.webp"}]'
+                  data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+                  onclick="openLightbox(this)">
+                  <figcaption>
+                    <span class="item-title">Subcategory of stuff 5</span>
+                  </figcaption>           
+                  </figure>
+                  <p class="description">This is a thing like</p>
+              </div>
+          </section>
+
+          <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+            <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+            <div class="projectDivider">
+                <figure class="portfolio-item-video">
+                <img src="./WebsiteImages/aliveInASense/photos/sketches.webp" 
+                alt="sketches"
+                data-images='[{"type":"image","src":"./WebsiteImages/aliveInASense/photos/sketches1.webp"},
+                {"type":"image","src":"./WebsiteImages/aliveInASense/photos/sketches2.webp"},
+                {"type":"image","src":"./WebsiteImages/aliveInASense/photos/sketches3.webp"},
+                {"type":"image","src":"./WebsiteImages/aliveInASense/photos/sketches4.webp"},
+                {"type":"image","src":"./WebsiteImages/aliveInASense/photos/sketches5.webp"},
+                {"type":"image","src":"./WebsiteImages/aliveInASense/photos/sketches6.webp"},
+                {"type":"image","src":"./WebsiteImages/aliveInASense/photos/sketches7.webp"},
+                {"type":"image","src":"./WebsiteImages/aliveInASense/photos/sketches8.webp"}]'
+                data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+                onclick="openLightbox(this)">
+                <figcaption>
+                  <span class="item-title">Subcategory of stuff 5</span>
+                </figcaption>           
+                </figure>
+                <p class="description">This is a thing like</p>
+            </div>
+        </section>
+
+            <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+              <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+              <div class="projectDivider">
+                  <figure class="portfolio-item-video">
+                  <img src="./WebsiteImages/aliveInASense/photos/animalDrawing.webp" 
+                  alt="animaldrawing"
+                  data-images='[{"type":"image","src":"./WebsiteImages/aliveInASense/photos/animalDrawing1.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/animalDrawing2.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/animalDrawing3.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/animalDrawing4.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/animalDrawing5.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/animalDrawing6.webp"}]'
+                  data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+                  onclick="openLightbox(this)">
+                  <figcaption>
+                    <span class="item-title">Subcategory of stuff 5</span>
+                  </figcaption>           
+                  </figure>
+                  <p class="description">This is a thing like</p>
+              </div>
+            </section>
+
+            <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+              <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+              <div class="projectDivider">
+                  <figure class="portfolio-item-video">
+                  <img src="./WebsiteImages/aliveInASense/photos/plushie.webp" 
+                  alt="plushie"
+                  data-images='[{"type":"image","src":"./WebsiteImages/aliveInASense/photos/plushie1.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/plushie2.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/plushie3.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/plushie4.webp"},
+                  {"type":"image","src":"./WebsiteImages/aliveInASense/photos/plushie5.webp"}]'
+                  data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+                  onclick="openLightbox(this)">
+                  <figcaption>
+                    <span class="item-title">Subcategory of stuff 5</span>
+                  </figcaption>           
+                  </figure>
+                  <p class="description">This is a thing like</p>wallArt
+              </div>
+            </section>
+  </div> <!-- 3 -->
+
+  <div class="territory" id="neverAlive" data-color="#a29bfe" data-caption="NEVER ALIVE"> <!-- 4 -->
+            <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+              <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+              <div class="projectDivider">
+                  <figure class="portfolio-item-video">
+                  <img src="./WebsiteImages/neverAlive/photos/building.webp" 
+                  alt="buliding"
+                  data-images='[{"type":"image","src":"./WebsiteImages/neverAlive/photos/building1.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/building2.webp"}]'
+                  data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+                  onclick="openLightbox(this)">
+                  <figcaption>
+                    <span class="item-title">Subcategory of stuff 5</span>
+                  </figcaption>           
+                  </figure>
+                  <p class="description">This is a thing like</p>wallArt
+              </div>
+            </section>
+
+            <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+              <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+              <div class="projectDivider">
+                  <figure class="portfolio-item-video">
+                  <img src="./WebsiteImages/neverAlive/photos/houseFeature.webp" 
+                  alt="housefeature"
+                  data-images='[{"type":"image","src":"./WebsiteImages/neverAlive/photos/houseFeature1.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/houseFeature2.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/houseFeature3.webp"}]'
+                  data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+                  onclick="openLightbox(this)">
+                  <figcaption>
+                    <span class="item-title">Subcategory of stuff 5</span>
+                  </figcaption>           
+                  </figure>
+                  <p class="description">This is a thing like</p>wallArt
+              </div>
+            </section>
+
+            <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+              <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+              <div class="projectDivider">
+                  <figure class="portfolio-item-video">
+                  <img src="./WebsiteImages/neverAlive/photos/kitchen.webp" 
+                  alt="kitchen"
+                  data-images='[{"type":"image","src":"./WebsiteImages/neverAlive/photos/kitchen1.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/kitchen2.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/kitchen3.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/kitchen4.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/kitchen5.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/kitchen6.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/kitchen7.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/kitchen8.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/kitchen9.webp"}]'
+                  data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+                  onclick="openLightbox(this)">
+                  <figcaption>
+                    <span class="item-title">Subcategory of stuff 5</span>
+                  </figcaption>           
+                  </figure>
+                  <p class="description">This is a thing like</p>wallArt
+              </div>
+            </section>
+
+            <section> <!--Project Titles of featured-item-section" 1-x (go as far as needed)-->
+              <h2 class="collectionTitle">Subcategory of stuff 6</h2>    <!-- projectSection Title (youtbe video here)-->
+              <div class="projectDivider">
+                  <figure class="portfolio-item-video">
+                  <img src="./WebsiteImages/neverAlive/photos/furniture.webp" 
+                  alt="furniture"
+                  data-images='[{"type":"image","src":"./WebsiteImages/neverAlive/photos/furniture1.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/furniture2.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/furniture3.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/furniture4.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/furniture5.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/furniture6.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/furniture7.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/furniture8.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/furniture9.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/furniture10.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/furniture11.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/furniture12.webp"},
+                  {"type":"image","src":"./WebsiteImages/neverAlive/photos/furniture13.webp"}]'
+                  data-caption="<strong>TITLE</strong><br>GIGGITY GIGGITY GIGGITY"
+                  onclick="openLightbox(this)">
+                  <figcaption>
+                    <span class="item-title">Subcategory of stuff 5</span>
+                  </figcaption>           
+                  </figure>
+                  <p class="description">This is a thing like</p>wallArt
+              </div>
+            </section>
+        </div> <!-- 4 -->
+            
+  <!--<div class="gapMaker"> </div>-->
+  <!--________^ Portfolio Horzontal scroll ^________-->
+  <!--_________________^ PORTFOLIO ITEMS HERE ^_________________-->
+  </div>
+  <button class="scroll-btn scroll-right" onclick="scrollRow(this, 1)">&#10095;</button><!--<BUTTON>-->
+  </div><!--<BUTTON>-->
+
+</main>
+
+<footer>
+    <ul>
+      <li><a href="#alive">Alive</a></li>
+      <li><a href="#aliveAtOnePoint">Alive at One Point</a></li>
+      <li><a href="#aliveInASense">Alive in a Sense</a></li>
+      <li><a href="#neverAlive">Never Alive</a></li>
+    </ul>
+</footer>
+  <div class="custom-cursor"></div>
+  <script type="module">
+    import { MeshoptDecoder } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/libs/meshopt_decoder.module.js';
+  
+    // Wait for model-viewer to be defined, then register the decoder
+    await customElements.whenDefined('model-viewer');
+    const ModelViewerElement = customElements.get('model-viewer');
+    ModelViewerElement.meshoptDecoderLocation = 'https://cdn.jsdelivr.net/npm/meshoptimizer@0.20.0/meshopt_decoder.js';
+  </script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <script type="module">
+  await customElements.whenDefined('model-viewer');
+  customElements.get('model-viewer').meshoptDecoderLocation =
+    'https://cdn.jsdelivr.net/npm/meshoptimizer@0.20.0/meshopt_decoder.js';
+  </script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+</html>
