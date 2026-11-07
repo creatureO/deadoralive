@@ -126,6 +126,11 @@ document.addEventListener('mousemove', (e) => {
 });
 
 
+
+
+
+
+/*
 //scrollrow backgrond color change ===============================================================================================================
 // 1. Grab the container and all the target box territories
 const container = document.querySelector('.workRow');
@@ -150,3 +155,4 @@ const observer = new IntersectionObserver((entries) => {
 
 // 4. Tell the observer to actively watch every box territory
 boxes.forEach(box => observer.observe(box));
+*/

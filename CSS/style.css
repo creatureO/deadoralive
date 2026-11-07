@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 *{
     font-family: 'Rubik', sans-serif;
@@ -36,7 +37,7 @@ body{
 
 p{
     font-size: 1e;
-    color:black;
+    color:rgb(220,220,220);
 }
 
 a{
@@ -58,6 +59,10 @@ h1{
     display:block;
 }
 
+header h1{
+  font-family: 'Kablammo', sans-serif;
+}
+
 
 /* ============================================================================================= CLICKABLE IMAGES FUNCTION, Lightboxes */
 .hidden {
@@ -73,7 +78,7 @@ h1{
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(255, 255, 255, 0.90);
+  background: rgba(0, 84, 35, 0.9);
   z-index: 1000;
   display: flex;
   flex-wrap: wrap;     /* Enables items to wrap onto new lines */
@@ -115,11 +120,11 @@ h1{
   
   #lightbox-img {
     max-height: 85vh;
-    max-width: 60vw;
+    max-width: 90vw;
   }
   
   #lightbox-caption {
-    color: black;
+    color: white;
     font-size: 2vh;
     max-width: 400px;
     max-height: 50vh;
@@ -182,15 +187,15 @@ h1{
   
   #lightbox-prev, #lightbox-next { /*cilckable arrows for multi stack*/
     position: absolute;
-    color: green;
+    color: white;
     font-size: 5rem;
     cursor: crosshair;
     padding: 5vh 1.5vw;
     transform: scale(0.75,1);
     user-select: none; /* prevents the arrow text from being selected/highlighted on click */
     transition: transform 0.5s ease, background-color 0.3s ease, scale 0.5s ease;
-    background-color: rgba(144, 238, 144, 0.8);
     z-index: 50;
+    bottom: 10vh;
     }
   
   #lightbox-prev:hover, #lightbox-next:hover {
@@ -313,18 +318,46 @@ nav a:hover{
 /* =============================================== MAIN CONTENT ================================================ */
 
 main{
-  padding-top:25vh;
+  padding:0px;
+  height: fit-content;
 }
 
 /*_____________________v SCROLL WHEEL v______________________*/
+#alive{
+  background-image:radial-gradient(white,rgb(138, 177, 255));
+}
+
+#aliveAtOnePoint{
+  background-color:darkgoldenrod;
+  background-image: url('../WebsiteImages/background-textures/dirt.webp'); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center;
+}
+
+#aliveInASense{
+  background-color: sienna;
+  background-image: url('../WebsiteImages/background-textures/stone.webp'); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center;}
+
+#neverAlive{
+  background-color: black;
+  background-image: url('../WebsiteImages/background-textures/dripping.webp'); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: top;
+}
+
 .workRow{
-
   display:flex;
-  align-items: end;
+  align-items: center;
   flex-shrink: 0;         /* stops items from shrinking to fit — this is the key line */
-  overflow-x: auto;       
+  overflow-x: auto;    
+  overflow-y: hidden;   
   white-space: nowrap;
-
+  height:80vh;
   /* remove overflow-y: visible, it does nothing */
   padding: 0px;        /* room for the scaled figure above and below */
   margin: 0px;        /* optional: cancels the extra space in the layout */
@@ -334,12 +367,16 @@ main{
   /*modify scroll bar*/
   scrollbar-width: auto; /* Options: auto, thin, none */
   scrollbar-color: orange white; /* thumb color | track color */
+  border-bottom:solid 1px black;
+
 }
 
 .territory{
   display:flex;
   align-items: end;
   padding: 20px 0px;
+  height:fit-content;
+  overflow-y: clip;
 }
 
 /* 2. WebKit Syntax for Safari and Legacy WebKit Engines */ /* The entire scrollbar container */
@@ -380,30 +417,27 @@ main{
 }
 
 .work-row-wrapper {
-  position: static;   /* this is the key line — it anchors the buttons below */
-  height:fit-content;
+  position: relative;   /* this is the key line — it anchors the buttons below */
 }
 
 .scroll-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);   /* centers vertically regardless of row height */
-  background-color:lightgreen;
-  color: green;
+  background:none;
+  color: white;
   border: none;
   font-size: 5rem;
   padding: 10px 0.75vw;
   margin: 0px 0.75vw;
   cursor: crosshair;
   z-index: 999;                    /* keeps buttons above the images, not hidden behind them */
-  opacity: 0.75;
   height:fit-content;
   border-radius: 5vw;
-  transition: opacity 0.3s ease, font-size 0.3s ease;
+  transition: font-size 0.3s ease;
 }
 
 .scroll-btn:hover {
-  opacity: 1;
   font-size: 10rem;
 }
 
@@ -444,7 +478,7 @@ section{
 display:block; 
 gap:0px;
 margin:0px;
-padding:0px;
+padding:0vw 5vw;
 width:400px;
 overflow-y: visible;
 }
@@ -454,16 +488,16 @@ overflow-y: visible;
 /*FIGURE & FIGURE ITEM HOVER TITLES*/
 figure{
     position:relative;
-    height: fit-content;
+    height: 40vh;
     overflow:hidden;
-    border-radius: 2.5vw;
+    border-radius: 1vw;
     scale:1;
-    transition: border-radius 0.3s ease, scale 0.5s ease;
+    transition: border-radius 0.3s ease, scale 0.3s ease;
     box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3);
 }
 
 figure:hover{
-    border-Radius:15vw;
+    border-Radius:5vw;
     scale:1.5;
     z-index: 300;
 }
@@ -534,7 +568,7 @@ figcaption {
   /*border: 2px solid red;*/
   }
 
-  .viewer-container { width: 100%; height: 50vh; background: rgb(220,220,220); border-radius: 5vw; overflow: hidden; }
+  .viewer-container {height: 50vh; background: rgb(220,220,220); border-radius: 5vw; overflow: hidden; }
 
   model-viewer { width: 100%; height: 100%; }
 
@@ -543,11 +577,7 @@ footer{
 column-gap: 10vw;
 padding:1vw 4vw;
 height:fit-content;
-background-color: grey;
-background-image:url('../WebsiteImages/alive/motionItems/colorfulFish.webp');
-background-position: center;  /*replaces background-attchment: fixed*/
-background-repeat: no-repeat;
-background-size:cover; /* Optional: keeps it full screen */
+background-color: black;
 }
 
 footer ul{
@@ -598,22 +628,23 @@ causing content to spill past the edge of the screen.
   grid-auto-flow: row;
   place-items: center; /* Centers both horizontally and vertically */
   gap: 2em;
-  padding: 10vw 12vw;
+  padding: 5vw 8vw;
   width: 100%;
   max-height: 100%;
   align-items: center;
   width:100vw;
+  height: 80vh;
 }
 
 #lightbox-caption {
-  max-height: 28vh;
+  max-height: 40vh;
   padding: 10px;
 }
 
 #lightbox-content img, #lightbox-content video, #lightbox-content iframe{
-  width:100%;
-  border-radius:10vw;
-  max-height: 50vh;
+  max-width: 100%;
+  border-radius:2.5vw;
+  height: auto;
 }
 
 #lightbox-youtube{
@@ -629,7 +660,7 @@ border-radius:10vw;
 
 #lightbox-prev, #lightbox-next { /*cilckable arrows for multi stack*/
   position: absolute;
-  color: green;
+  color: white;
   font-size: 5rem;
   cursor: crosshair;
   padding: 1vh 1.5vw;
@@ -637,19 +668,18 @@ border-radius:10vw;
   border-radius: 5vw;
   transform: scale(0.75,1);
   user-select: none; /* prevents the arrow text from being selected/highlighted on click */
-  transition: transform 0.5s ease;
-  background: rgba(144, 238, 144, 0.8);
   z-index: 50;
-  bottom:20vh;
+  bottom:10vh;
   }
-
-#lightbox-prev:hover, #lightbox-next:hover {
-  background: lightgreen;
-  transform: scale(0.75,1);
-}
 
 #lightbox-prev {
   left: 1vw;
+}
+
+#lightbox-prev:hover, #lightbox-next:hover {
+  transform: scale(0.75,1);
+  background-color: none;
+  box-shadow: none;
 }
 
 #lightbox-next {
@@ -660,9 +690,8 @@ border-radius:10vw;
   display:flex;
   justify-content: center;
   position: absolute;
-  top:90vh;
-  right: 28vw;
-  width: 40vw;
+  top:4vh;
+  right: 5vh;
   height:fit-content;
   font-size: 2vh;
   border-radius: 5vw;
@@ -688,6 +717,8 @@ nav{
   figure{
     position:relative;
     height: 50vh;
+    width:80vw;
+    max-width: 60%;
     overflow:hidden;
     
     border-radius: 2.5vw;
@@ -701,6 +732,8 @@ figure:hover{
     scale:1.5;
     z-index: 300;
 }
+
+.viewer-container{max-width:80vw; pointer-events: none;}
 
 
 .scroll-btn {
