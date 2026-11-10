@@ -804,7 +804,7 @@ figure:hover{
 
 .viewer-container{
   max-height:18vh;
-  max-width:50vw; 
+  width:40vw;
 }
 
 
