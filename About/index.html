@@ -10,9 +10,23 @@
   <link rel="stylesheet" href="CSS/style.css">
   <script src="JS/main.js" defer></script>
   <style>
+  @import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+  *{
+    color:white;
+  }
+
   body{
-    background-color: rgb(215, 255, 207);
-    font-family:'Rubik', sans-serif;
+  background-color:black;
+  background-image: url('../WebsiteImages/background-textures/dirt.webp'); 
+  background-repeat: repeat; 
+  background-size: cover; 
+  background-position: center;    font-family: 'Nunito', sans-serif;
+  }
+
+  header{
+    padding: 0vw 2vw;
   }
 
   .backButton {
@@ -39,7 +53,7 @@
   }
 
   h1{
-    padding:1vw;
+    font-family: 'Kablammo', sans-serif;
   }
 
   .textArea{
@@ -133,7 +147,7 @@
 hr{
     border: none;
     height: 1px; /* Adjust thickness as needed */
-    background-color: #000000; /* Pure black */
+    background-color: #ffffff; /* Pure black */
     width: 100%; /* Spans the full width */
     margin: 0px; /* Space above and below the bar */
   }
@@ -141,7 +155,7 @@ hr{
   @media screen and (max-width: 900px){
     .textArea{
     position:absolute;
-    top:50vw;
+    top:60vw;
     left:20vw;
     width:50vw;
     line-height: 1em;
@@ -162,14 +176,16 @@ hr{
 <header>
     <nav>
     </nav>
+    <h1>ABOUT US</h1>
 </header>
 
 <main>
-<div style="display:flex; justify-content: space-between; height:fit-content">
-<h1>ABOUT US</h1><a href="../" class="backButton">back</a>
+<div style="display:flex; padding:0vw 2vw;">
+<a href="../" class="backButton">back</a>
 </div>
+<br>
 <hr>
-<h1>&#x2B07 Scroll Down &#x2B07</h1>
+<h1 style="font-family: 'Nunito', sans-serif; padding: 0vw 2vw;">&#x2B07 Scroll Down &#x2B07</h1>
 
 <div class="scrollTrack">
 <div class="paperPageWrapper">

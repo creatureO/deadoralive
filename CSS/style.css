@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 *{
-    font-family: 'Rubik', sans-serif;
-    cursor:none;
+  font-family: 'Nunito', sans-serif;
+  cursor:none;
 }
 
 /* ==================== custom cursor ==================== */
@@ -36,8 +36,8 @@ body{
 }
 
 p{
-    font-size: 1e;
-    color:rgb(220,220,220);
+    font-size: 1em;
+    color:rgb(255,255,255);
 }
 
 a{
@@ -78,7 +78,7 @@ header h1{
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 84, 35, 0.9);
+  background: radial-gradient(rgb(0, 0, 0, 0.25), rgb(0, 0, 0, 0.75), rgb(0, 0, 0, 0.95), rgb(0, 0, 0, 1));  
   z-index: 1000;
   display: flex;
   flex-wrap: wrap;     /* Enables items to wrap onto new lines */
@@ -86,21 +86,22 @@ header h1{
   justify-content: center;
   }
 
-  #lightbox img, #lightbox video, #lightbox iframe{
+  #lightbox img, #lightbox video{
     height:100%;
-    border-radius: 2.5vw;
+    border-radius: 1rem;
   }
 
   #model-viewer {
     width: 80vw;
     height: 70vh;
-    border-radius:5vw;
+    border-radius: 1rem;
   }
   
-  #lightbox-youtube{
+  #lightbox iframe{
     position: static;
     width: 64vw;
     height: 36vw;
+    border-radius: 1rem;
   }
 
   
@@ -125,7 +126,7 @@ header h1{
   
   #lightbox-caption {
     color: white;
-    font-size: 2vh;
+    font-size: 1em;
     max-width: 400px;
     max-height: 50vh;
     line-height: 2em;
@@ -205,30 +206,30 @@ header h1{
   }
   
   #lightbox-prev {
-    left: 1vw;
-    border-top-right-radius: 2.5vw;
-    border-bottom-left-radius: 2.5vw;
+    left: 2vw;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
     transition: border-top-right-radius 0.3s ease, border-bottom-left-radius 0.3s ease, rotate 0.3s ease;
   }
   
   #lightbox-next {
-    right: 1vw;
-    border-bottom-right-radius: 2.5vw;
-    border-top-left-radius: 2.5vw;
+    right: 2vw;
+    border-bottom-right-radius: 2rem;
+    border-top-left-radius: 2rem;
     transition: border-bottom-right-radius 0.3s ease, border-top-left-radius 0.3s ease, rotate 0.3s ease;
   }
 
   #lightbox-prev:hover{
     left: 1vw;
-    border-top-right-radius: 5vw;
-    border-bottom-left-radius: 5vw;
+    border-top-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
     rotate: -15deg; 
   }
   
   #lightbox-next:hover {
     right: 1vw;
-    border-bottom-right-radius: 5vw;
-    border-top-left-radius: 5vw;
+    border-bottom-right-radius: 5rem;
+    border-top-left-radius: 5rem;
     rotate: 15deg; 
   }
 
@@ -243,7 +244,7 @@ header{
 }
 
 nav{
-    margin-top:3vw;
+    margin-top:1rem;
     z-index: 100;
     background-color:lightgreen;
 
@@ -297,7 +298,7 @@ nav a:hover{
     font-size:2vh; 
     line-height: 0.4em; 
     letter-spacing: -0.15em;
-    font-weight: 100;
+    font-weight: 900;
     padding:1vh 20px 3vh 20px;
     overflow-x:hidden;
     display:flex;
@@ -359,7 +360,7 @@ main{
   white-space: nowrap;
   height:80vh;
   /* remove overflow-y: visible, it does nothing */
-  padding: 0px;        /* room for the scaled figure above and below */
+  padding: 0px 4vw;        /* room for the scaled figure above and below */
   margin: 0px;        /* optional: cancels the extra space in the layout */
 
   /*_____________________ SCROLL WHEEL color settings______________________*/
@@ -472,33 +473,35 @@ display:none;
 
 section{
     overflow: visible;
+    padding:1vw;
 }
 
 .projectDivider{
 display:block; 
-gap:0px;
-margin:0px;
-padding:0vw 5vw;
-width:400px;
+gap: 0px;
+margin: 0px;
+padding: 0px;
+width:fit-content;
 overflow-y: visible;
 }
-
-
 
 /*FIGURE & FIGURE ITEM HOVER TITLES*/
 figure{
     position:relative;
     height: 40vh;
+    width: 30vw;
+    margin: 0px;
     overflow:hidden;
-    border-radius: 1vw;
-    scale:1;
-    transition: border-radius 0.3s ease, scale 0.3s ease;
-    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    transform: scale(1);
+    transform-origin: bottom;
+    transition: border-radius 0.3s ease, transform 0.3s ease;
 }
 
 figure:hover{
-    border-Radius:5vw;
-    scale:1.5;
+    border-Radius:2rem;
+    transform: scale(1.2);
     z-index: 300;
 }
 
@@ -508,11 +511,24 @@ figure img{
     object-fit: cover;
     object-position: center;
     display: block;
+    background: rgba(0,0,0,0.5);
     transition: filter 0.5s ease;
 }
 
-figure img:hover{
-  filter: hue-rotate(90deg); 
+#alive figure img:hover{
+  filter: hue-rotate(90deg) saturate(10); 
+}
+
+#aliveAtOnePoint figure img:hover{
+  filter: hue-rotate(90deg) saturate(5); 
+}
+
+#aliveInASense figure img:hover{
+  filter: hue-rotate(45deg) saturate(1); 
+}
+
+#neverAlive figure img:hover{
+  filter: hue-rotate(0deg) saturate(0); 
 }
 
 figcaption {
@@ -550,8 +566,8 @@ figcaption {
     width: 100%;
     height: 100%;
   }
-  
-  .item-title {
+
+  .item-title, .viewer-container p {
     color: #ffffff;
     mix-blend-mode: difference;
     font-weight: bold;
@@ -561,24 +577,67 @@ figcaption {
   }
 
   .description{
-    display:flex;
-    justify-content: center;
+  display:flex;
+  justify-content: center;
   white-space: wrap;
   font-size: 1.25em;
-  /*border: 2px solid red;*/
+  margin: 0px;
+  padding:2vw;
+  border-top:none;
+  background: rgba(0,0,0,0.5);
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
   }
 
-  .viewer-container {height: 50vh; background: rgb(220,220,220); border-radius: 5vw; overflow: hidden; }
+  .viewer-container {
+    position: relative;
+    height: 50vh; 
+    width: 25vw; 
+    padding: 0px;
+    background-color: rgb(200,200,200);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;    
+    overflow: hidden;
+  }
 
-  model-viewer { width: 100%; height: 100%; }
+  .viewer-container p{
+    position:absolute;
+    margin: 0px;
+
+    font-size: 2em;
+    opacity:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    background: rgba(255,255,255,0.8);
+    color:black;
+    z-index: 20;
+    transition: opacity 0.3s;
+  }
+
+  .viewer-container:hover p{
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  model-viewer { 
+    width: 100%; 
+    height: 100%; 
+  }
 
 /* =============================================== FOOTER ================================================ */
 footer{
 column-gap: 10vw;
 padding:1vw 4vw;
+padding-top:8vw;
 height:fit-content;
 background-color: black;
-}
+background-image: url('../WebsiteImages/background-textures/stone.webp'); 
+background-repeat: no-repeat; 
+background-size: cover; 
+background-position: center;}
 
 footer ul{
   list-style: none;
@@ -627,8 +686,10 @@ causing content to spill past the edge of the screen.
   grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   grid-auto-flow: row;
   place-items: center; /* Centers both horizontally and vertically */
+  align-content: start;
   gap: 2em;
   padding: 5vw 8vw;
+  margin-top:6vh;
   width: 100%;
   max-height: 100%;
   align-items: center;
@@ -641,16 +702,17 @@ causing content to spill past the edge of the screen.
   padding: 10px;
 }
 
-#lightbox-content img, #lightbox-content video, #lightbox-content iframe{
+#lightbox-content img, #lightbox-content video{
   max-width: 100%;
-  border-radius:2.5vw;
+  max-height: 80vh;
+  border-radius: 1rem;
   height: auto;
 }
 
-#lightbox-youtube{
+#lightbox-content iframe{
 width:100%;
-height:50vh;
-border-radius:10vw;
+height:60vh;
+border-radius:1rem;
 }
 
 #model-viewer {
@@ -714,26 +776,37 @@ nav{
   }
 
 /* =============================================== MAIN CONTENT ON PHONE ================================================ */
+.projectDivider{
+  width:fit-content;
+}
+
   figure{
     position:relative;
-    height: 50vh;
-    width:80vw;
-    max-width: 60%;
+    height: 20vh;
+    width: 40vw;
     overflow:hidden;
-    
-    border-radius: 2.5vw;
-    scale:1;
+    margin:0px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;    
+    transform: scale(1);
     transition: border-radius 0.3s ease, scale 0.5s ease;
-    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3);
 }
 
 figure:hover{
-    border-Radius:15vw;
-    scale:1.5;
+    border-Radius: 2rem;
+    transform: scale(1.25);
     z-index: 300;
 }
 
-.viewer-container{max-width:80vw; pointer-events: none;}
+.description{
+  font-size:0.75em;
+}
+
+.viewer-container{
+  max-height:18vh;
+  max-width:50vw; 
+  pointer-events: none;
+}
 
 
 .scroll-btn {
